@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import { Navbar, NavbarBrand, Form } from 'reactstrap';
+import Main from './components/MainComponent';
 import './App.css';
-import Menu from './components/MenuComponent'
+
 import {DISHES} from './shared/dishes'
 
 
-class App extends Component{
-  constructor(props){
-    super(props);
 
-    this.state ={
-      dishes : DISHES
-    };
-  }
+class App extends Component{
+  // constructor(props){
+  //   super(props);
+
+  //   this.state ={
+  //     dishes : DISHES
+  //   };
+  // }
 
  
   
@@ -21,12 +21,8 @@ class App extends Component{
 render(){
   return (
     <div>
-      <Navbar dark color="primary">
-        <div className="container">
-          <NavbarBrand href="/" >Ali</NavbarBrand>
-        </div>
-      </Navbar>
-      <Menu dishes={this.state.dishes}/>
+      <Main/>
+      {/* <Menu dishes={this.state.dishes}/> */}
     </div>
   );
 }
